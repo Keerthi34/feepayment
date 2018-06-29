@@ -14,7 +14,7 @@ router.post('/feepayment', function(req,res,next){
     Student_Type:req.body.Student_Type,
     SNo:req.body.SNo,
     Total_Fee:req.body.Total_Fee,
-    Fee_Paid:req.body.Fee_Paid,
+    /*Fee_Paid:req.body.Fee_Paid,
     Date:req.body.Date,
     Description:req.body.Description,
     Pending_Fee:req.body.Pending_Fee
@@ -47,7 +47,7 @@ router.get('/getall', function(req, res, next) {
 });
 
 router.get('/findbystudentid/:Student_Id', function(req, res, next) {
-  winston.log('info',"Info: Get all class records")
+  winston.log('info',"Info: Get all payment records")
   console.log("info");
   Fee.find({Student_Id: req.params.Student_Id},function(err,data){
       if(err)
